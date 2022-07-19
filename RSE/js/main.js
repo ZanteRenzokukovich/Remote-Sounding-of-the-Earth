@@ -19,7 +19,12 @@ let coordinatePolygon = {
             [33.17882560546876, 49.48314198262034]
         ]]}
 
-L.geoJSON(coordinatePolygon, {color: 'red'}).addTo(map);
+let mpolygon = L.geoJSON(coordinatePolygon, {color: 'red'}).addTo(map);
+
+//Масштабувати карту до полігону
+function clickPolygon(){
+    map.fitBounds(mpolygon.getBounds());
+}
 
 //Маркер
 let coordinatePoint = {
@@ -27,7 +32,12 @@ let coordinatePoint = {
         "coordinates": [33.92314933593751, 49.08001002976464]
         }
 
-L.geoJSON(coordinatePoint).addTo(map);
+let mpoint = L.geoJSON(coordinatePoint).addTo(map);
+
+//Масштабувати карту до маркера
+function clickPoint(){
+    map.fitBounds(mpoint.getBounds());
+}
 
 //Полілінія
 let coordinateLine = {
@@ -38,7 +48,10 @@ let coordinateLine = {
            [34.92290519531251, 48.23092113408583]
         ]}
 
-let geoJSON = L.geoJSON(coordinateLine, {color: 'green'}).addTo(map);
+let mline = L.geoJSON(coordinateLine, {color: 'green'}).addTo(map);
 
 //Масштабувати карту до полілінії
-//map.fitBounds(geoJSON.getBounds());
+function clickLine(){
+    map.fitBounds(mline.getBounds());
+}
+
