@@ -24,6 +24,7 @@ let mpolygon = L.geoJSON(coordinatePolygon, {color: 'red'}).addTo(map);
 //Масштабувати карту до полігону
 function clickPolygon(){
     map.fitBounds(mpolygon.getBounds());
+    document.getElementById('info').innerHTML = "";
 }
 
 //Маркер
@@ -37,6 +38,7 @@ let mpoint = L.geoJSON(coordinatePoint).addTo(map);
 //Масштабувати карту до маркера
 function clickPoint(){
     map.fitBounds(mpoint.getBounds());
+    document.getElementById('info').innerHTML = "";
 }
 
 //Полілінія
@@ -53,5 +55,34 @@ let mline = L.geoJSON(coordinateLine, {color: 'green'}).addTo(map);
 //Масштабувати карту до полілінії
 function clickLine(){
     map.fitBounds(mline.getBounds());
+    document.getElementById('info').innerHTML = ""; //прицепить json ??
 }
 
+// Віддалити карту
+function unZoom(){
+    map.setView([50.450001, 30.523333], 3);
+}
+
+let myURL = jQuery('script[src$="main.js"]')
+  .attr('src')
+  .replace('main.js', '')
+
+let myIcon = L.icon({
+  iconUrl: myURL + 'pin24.png',
+  iconRetinaUrl: myURL + 'pin48.png',
+  iconSize: [29, 24],
+  iconAnchor: [9, 21],
+  popupAnchor: [0, -14],
+})
+
+for (let i = 0; i < markers.length; ++i) {
+  L.marker([markers[i].lat, markers[i].lng], { icon: myIcon })
+    .bindPopup(
+      '<a href="' +
+        markers[i].url +
+        '" target="_blank">' +
+        markers[i].name +
+        '</a>'
+    )
+    .addTo(map)
+}
