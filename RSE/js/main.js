@@ -1,14 +1,14 @@
-//Карта OpenStreetMap
-let map = L.map('map').setView([50.450001, 30.523333], 4);
+// Карта OpenStreetMap
+let map = L.map('map').setView([48.379433, 31.16558], 4); // координати України
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    subdomains: ['a','b','c']
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
 }).addTo(map);
 
-    //Маркер на Київ
-    //L.marker([50.4, 30.5]).addTo(map).bindPopup("My Marker");
+    // Маркер на Київ
+    // L.marker([50.4, 30.5]).addTo(map).bindPopup("My Marker");
 
-//Полігон
+// Полігон
 let coordinatePolygon = {
         "type": "Polygon",
         "coordinates": [[
@@ -21,13 +21,13 @@ let coordinatePolygon = {
 
 let mpolygon = L.geoJSON(coordinatePolygon, {color: 'red'}).addTo(map);
 
-//Масштабувати карту до полігону
+// Масштабувати карту до полігону
 function clickPolygon(){
     map.fitBounds(mpolygon.getBounds());
     document.getElementById('info').innerHTML = "";
 }
 
-//Маркер
+// Маркер
 let coordinatePoint = {
         "type": "Point",
         "coordinates": [33.92314933593751, 49.08001002976464]
@@ -35,13 +35,13 @@ let coordinatePoint = {
 
 let mpoint = L.geoJSON(coordinatePoint).addTo(map);
 
-//Масштабувати карту до маркера
+// Масштабувати карту до маркера
 function clickPoint(){
     map.fitBounds(mpoint.getBounds());
     document.getElementById('info').innerHTML = "";
 }
 
-//Полілінія
+// Полілінія
 let coordinateLine = {
     "type":"LineString",
     "coordinates": [
@@ -52,10 +52,10 @@ let coordinateLine = {
 
 let mline = L.geoJSON(coordinateLine, {color: 'green'}).addTo(map);
 
-//Масштабувати карту до полілінії
+// Масштабувати карту до полілінії
 function clickLine(){
     map.fitBounds(mline.getBounds());
-    document.getElementById('info').innerHTML = ""; //прицепить json ??
+    document.getElementById('info').innerHTML = ""; 
 }
 
 // Віддалити карту
@@ -63,10 +63,12 @@ function unZoom(){
     map.setView([50.450001, 30.523333], 3);
 }
 
+// Посилання до іконки
 let myURL = jQuery('script[src$="main.js"]')
   .attr('src')
   .replace('main.js', '')
 
+// Альтернатива
 let myIcon = L.icon({
   iconUrl: myURL + 'pin24.png',
   iconRetinaUrl: myURL + 'pin48.png',
@@ -75,6 +77,7 @@ let myIcon = L.icon({
   popupAnchor: [0, -14],
 })
 
+// Читання з json файлу (координати міст)
 for (let i = 0; i < markers.length; ++i) {
   L.marker([markers[i].lat, markers[i].lng], { icon: myIcon })
     .bindPopup(
@@ -85,4 +88,42 @@ for (let i = 0; i < markers.length; ++i) {
         '</a>'
     )
     .addTo(map)
+}
+
+/* Координати розташування користувача
+   Передає приблизне місце розташування...*/
+let myLocationCount = 0;
+let myLocationLatLng;
+
+function myLocation() {
+    document.getElementsByClassName('box');
+    if (myLocationCount === 0) {
+        map.locate({
+            setView: true,
+            maxZoom: 16
+        });
+
+        function onLocationFound(e) {
+            let radius = e.accuracy;
+
+            myLocationLatLng = e.latlng;
+
+            L.marker(e.latlng, {
+                icon: myIcon
+            }).addTo(map).bindPopup("Ви не далі ніж " + radius + " метрів від цієї точки").openPopup();
+
+            /* ... у радіусі */
+            L.circle(e.latlng, radius).addTo(map);
+
+            myLocationCount = myLocationCount + 1;
+        }
+
+        function onLocationError(e) {
+            alert("Вибачте, ми не змогли вас знайти !");
+        }
+        map.on("locationfound", onLocationFound);
+        map.on("locationerror", onLocationError);
+    } else {
+        fly(myLocationLatLng.lat, myLocationLatLng.lng, 12);
+    }
 }
