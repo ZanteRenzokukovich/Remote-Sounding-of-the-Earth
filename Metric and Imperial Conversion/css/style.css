@@ -1,3 +1,14 @@
-.box {
-	box-shadow: 0px 0px 17px 9px rgba(0, 51, 102, 0.7);
+@import url("https://use.fontawesome.com/releases/v6.1.2/css/all.css");
+.accordion-button:not(.collapsed)::after {
+  content: "\f085";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
+}
+
+.accordion-button.collapsed::after {
+  content: "\f013";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  background-image: none;
 }
