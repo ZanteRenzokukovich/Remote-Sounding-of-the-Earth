@@ -12,3 +12,16 @@
   font-family: "Font Awesome 6 Free";
   background-image: none;
 }
+
+#ft{
+  font-size: 14px;
+  height: 1.5rem
+}
+
+#anr{
+  padding-left: 70px;
+}
+
+#anl{
+  padding-left: 40px;
+}
