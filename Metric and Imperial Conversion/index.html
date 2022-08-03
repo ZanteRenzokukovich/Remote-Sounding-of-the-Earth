@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="ruler.ico" type="image/x-icon">
+
+    <title>Metric and Imperial Conversion</title>
+  </head>
+
+<!------------------------------------------------------------BODY--------------------------------------------------------------> 
+   <body>
+    <!-- Length Conversion --/////////////////////////////////////////////////////////////////////////////////////////////////--> 
+    <div class="container mt-4 col-8">
+      <div class="row">
+        <div class="accordion">
+          <div class="accordion-item">
+
+            <!-- panelsStayOpen-headingOne --> 
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true">
+              Length Conversion
+            </button>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+
+                <!-- Enter form -->
+                <div class="accordion-body">
+                  <form class="row g-2">
+                    <div class="col-auto">
+                      <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                    </div>
+
+                      <!-- Select form 1 -->
+                      <div class="col-auto">
+                        <select class="form-select form-select-sm">
+                          <option value="1">Millimetres/s [mm]</option>
+                          <option value="2">Centimetre/s [cm]</option>
+                          <option value="3">Metre/s [m]</option>
+                          <option value="4">Kilometre/s [km]</option>
+                          <option value="5">Inch/s [in]</option>
+                          <option value="6">Feet/s [ft]</option>
+                          <option value="7">Yard/s [yd]</option>
+                          <option value="8">Mile/s [ml]</option>
+                          <option value="9">Nautical mile/s [nm]</option>
+                        </select>
+                      </div>
+
+                      <!-- Select form 2 -->
+                      <div class="col-auto">
+                        <select class="form-select form-select-sm">
+                          <option value="1">Millimetres/s [mm]</option>
+                          <option value="2">Centimetre/s [cm]</option>
+                          <option value="3">Metre/s [m]</option>
+                          <option value="4">Kilometre/s [km]</option>
+                          <option value="5">Inch/s [in]</option>
+                          <option value="6">Feet/s [ft]</option>
+                          <option value="7">Yard/s [yd]</option>
+                          <option value="8">Mile/s [ml]</option>
+                          <option value="9">Nautical mile/s [nm]</option>
+                        </select>
+                      </div>
+
+                      <!-- Convert to -->
+                      <div class="col-auto">
+                        <button type="button" class="btn btn-primary btn-sm">Convert Length</button>
+                      </div>
+
+                      <!-- Hidden info -->
+                      <div class="alert alert-info" role="alert">
+                        <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                      </div>
+
+                      <!-- Rates -->
+                      <div class="row">
+                        <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
+                          <div class="col">
+                            <div class="collapse multi-collapse">
+                              <div class="pt-2">
+                                This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col">
+                            <div class="collapse multi-collapse">
+                              <div class="pt-2">
+                                This panel is hidden by default but revealed when the user activates the relevant trigger.
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div> <!-- accordion-item -->
+
+          <!-- Area Conversion --/////////////////////////////////////////////////////////////////////////////////////////////--> 
+          <div class="mt-4">
+            <div class="accordion-item">
+
+              <!-- panelsStayOpen-headingTwo --> 
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true">
+                Area Conversion
+              </button>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+
+                  <!-- Enter form -->
+                  <div class="accordion-body">
+                    <form class="row g-2">
+                      <div class="col-auto">
+                        <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                      </div>
+
+                        <!-- Select form 1 -->
+                        <div class="col-auto">
+                          <select class="form-select form-select-sm">
+                            <option value="1">Square Millimetres/s [mm2]</option>
+                            <option value="2">Square Centimetre/s [cm2]</option>
+                            <option value="3">Square Metre/s [m2]</option>
+                            <option value="4">Hectare/s [ha]</option>
+                            <option value="5">Square Kilometre/s [km2]</option>
+                            <option value="6">Square Inch/s [in2]</option>
+                            <option value="7">Square Feet/s [sq ft]</option>
+                            <option value="8">Square Yard/s [yd2]</option>
+                            <option value="9">Acre/s [a]</option>
+                            <option value="10">Square Mile/s [ml2]</option>
+                          </select>
+                        </div>
+
+                        <!-- Select form 2 -->
+                        <div class="col-auto">
+                          <select class="form-select form-select-sm">
+                            <option value="1">Square Millimetres/s [mm2]</option>
+                            <option value="2">Square Centimetre/s [cm2]</option>
+                            <option value="3">Square Metre/s [m2]</option>
+                            <option value="4">Hectare/s [ha]</option>
+                            <option value="5">Square Kilometre/s [km2]</option>
+                            <option value="6">Square Inch/s [in2]</option>
+                            <option value="7">Square Feet/s [sq ft]</option>
+                            <option value="8">Square Yard/s [yd2]</option>
+                            <option value="9">Acre/s [a]</option>
+                            <option value="10">Square Mile/s [ml2]</option>
+                          </select>
+                        </div>
+
+                        <!-- Convert to -->
+                        <div class="col-auto">
+                          <button type="button" class="btn btn-primary btn-sm">Area Conversion</button>
+                        </div>
+
+                        <!-- Hidden info -->
+                        <div class="alert alert-info" role="alert">
+                          <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                        </div>
+
+                        <!-- Rates -->
+                        <div class="row">
+                          <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse-2" aria-expanded="false"><summary><small>AREA CONVERSION RATES</small></summary></details>
+                            <div class="col">
+                              <div class="collapse multi-collapse-2">
+                                <div class="pt-2">
+                                  This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col">
+                              <div class="collapse multi-collapse-2">
+                                <div class="pt-2">
+                                  This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- accordion-item 2 -->
+                   
+            <!-- Volume Conversion --///////////////////////////////////////////////////////////////////////////////////-->
+            <div class="mt-4">
+              <div class="accordion-item">
+
+                <!-- panelsStayOpen-headingThree --> 
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true">
+                  Volume Conversion
+                </button>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+
+                    <!-- Enter form -->
+                    <div class="accordion-body">
+                      <form class="row g-2">
+                        <div class="col-auto">
+                          <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                        </div>
+
+                          <!-- Select form 1 -->
+                          <div class="col-auto">
+                            <select class="form-select form-select-sm">
+                              <option value="1">Cubic Centimetre/s [cm3]</option>
+                              <option value="2">Cubic Decimetre/s [dm2]</option>
+                              <option value="3">Cubic Metre/s [m3]</option>
+                              <option value="4">Litre/s [l]</option>
+                              <option value="5">Hectolitre/s [hl]</option>
+                              <option value="6">Cubic Inch/s [in3]</option>
+                              <option value="7">Cubic Feet/s [ft3]</option>
+                              <option value="8">Fluid Ounce/s [fl oz]</option>
+                              <option value="9">Pint/s [pt]</option>
+                              <option value="10">Gallon/s [gal]</option>
+                              <option value="11">US Fluid Ounce/s [US fl oz]</option>
+                              <option value="12">US Pint/s [US pt]</option>
+                              <option value="13">US Gallon/s [US gal]</option>
+                            </select>
+                          </div>
+
+                          <!-- Select form 2 -->
+                          <div class="col-auto">
+                            <select class="form-select form-select-sm">
+                              <option value="1">Cubic Centimetre/s [cm3]</option>
+                              <option value="2">Cubic Decimetre/s [dm2]</option>
+                              <option value="3">Cubic Metre/s [m3]</option>
+                              <option value="4">Litre/s [l]</option>
+                              <option value="5">Hectolitre/s [hl]</option>
+                              <option value="6">Cubic Inch/s [in3]</option>
+                              <option value="7">Cubic Feet/s [ft3]</option>
+                              <option value="8">Fluid Ounce/s [fl oz]</option>
+                              <option value="9">Pint/s [pt]</option>
+                              <option value="10">Gallon/s [gal]</option>
+                              <option value="11">US Fluid Ounce/s [US fl oz]</option>
+                              <option value="12">US Pint/s [US pt]</option>
+                              <option value="13">US Gallon/s [US gal]</option>
+                            </select>
+                          </div>
+
+                          <!-- Convert to -->
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-sm">Volume Conversion</button>
+                          </div>
+
+                          <!-- Hidden info -->
+                          <div class="alert alert-info" role="alert">
+                            <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                          </div>
+
+                          <!-- Rates -->
+                          <div class="row">
+                            <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse-3" aria-expanded="false"><summary><small>VOLUME CONVERSION RATES</small></summary></details>
+                              <div class="col">
+                                <div class="collapse multi-collapse-3">
+                                  <div class="pt-2">
+                                    This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+                                <div class="collapse multi-collapse-3">
+                                  <div class="pt-2">
+                                    This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- accordion-item 3 -->
+
+              <!-- Mass Conversion --///////////////////////////////////////////////////////////////////////////////////-->
+              <div class="mt-4">
+                <div class="accordion-item">
+
+                  <!-- panelsStayOpen-headingFour --> 
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true">
+                    Mass Conversion
+                  </button>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
+
+                      <!-- Enter form -->
+                      <div class="accordion-body">
+                        <form class="row g-2">
+                          <div class="col-auto">
+                            <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                          </div>
+
+                          <!-- Select form 1 -->
+                          <div class="col-auto">
+                            <select class="form-select form-select-sm">
+                              <option value="1">Millimetres/s [mm]</option>
+                              <option value="2">Centimetre/s [cm]</option>
+                              <option value="3">Metre/s [m]</option>
+                              <option value="4">Kilometre/s [km]</option>
+                              <option value="5">Inch/s [in]</option>
+                              <option value="6">Feet/s [ft]</option>
+                              <option value="7">Yard/s [yd]</option>
+                              <option value="8">Mile/s [ml]</option>
+                              <option value="9">Nautical mile/s [nm]</option>
+                            </select>
+                          </div>
+
+                          <!-- Select form 2 -->
+                          <div class="col-auto">
+                            <select class="form-select form-select-sm">
+                              <option value="1">Millimetres/s [mm]</option>
+                              <option value="2">Centimetre/s [cm]</option>
+                              <option value="3">Metre/s [m]</option>
+                              <option value="4">Kilometre/s [km]</option>
+                              <option value="5">Inch/s [in]</option>
+                              <option value="6">Feet/s [ft]</option>
+                              <option value="7">Yard/s [yd]</option>
+                              <option value="8">Mile/s [ml]</option>
+                              <option value="9">Nautical mile/s [nm]</option>
+                            </select>
+                          </div>
+
+                          <!-- Convert to -->
+                          <div class="col-auto">
+                            <button type="button" class="btn btn-primary btn-sm">Convert Length</button>
+                          </div>
+
+                          <!-- Hidden info -->
+                          <div class="alert alert-info" role="alert">
+                            <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                          </div>
+
+                          <!-- Rates -->
+                          <div class="row">
+                            <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse-4" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
+                              <div class="col">
+                                <div class="collapse multi-collapse-4">
+                                  <div class="pt-2">
+                                    This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col">
+                                <div class="collapse multi-collapse-4">
+                                  <div class="pt-2">
+                                    This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- accordion-item 4 -->
+
+ <div class="mt-4">
+                    <div class="accordion-item">
+                    <!-- panelsStayOpen-headingFive --> 
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true">
+                  Five
+                </button>
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show">
+
+                    <!-- Enter form -->
+                      <div class="accordion-body">
+                        <form class="row g-2">
+                          <div class="col-auto">
+                            <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                          </div>
+
+                            <!-- Select form 1 -->
+                              <div class="col-auto">
+                                <select class="form-select form-select-sm">
+                                  <option value="1">Millimetres/s [mm]</option>
+                                  <option value="2">Centimetre/s [cm]</option>
+                                  <option value="3">Metre/s [m]</option>
+                                  <option value="4">Kilometre/s [km]</option>
+                                  <option value="5">Inch/s [in]</option>
+                                  <option value="6">Feet/s [ft]</option>
+                                  <option value="7">Yard/s [yd]</option>
+                                  <option value="8">Mile/s [ml]</option>
+                                  <option value="9">Nautical mile/s [nm]</option>
+                                </select>
+                              </div>
+
+                            <!-- Select form 2 -->
+                              <div class="col-auto">
+                                <select class="form-select form-select-sm">
+                                  <option value="1">Millimetres/s [mm]</option>
+                                  <option value="2">Centimetre/s [cm]</option>
+                                  <option value="3">Metre/s [m]</option>
+                                  <option value="4">Kilometre/s [km]</option>
+                                  <option value="5">Inch/s [in]</option>
+                                  <option value="6">Feet/s [ft]</option>
+                                  <option value="7">Yard/s [yd]</option>
+                                  <option value="8">Mile/s [ml]</option>
+                                  <option value="9">Nautical mile/s [nm]</option>
+                                </select>
+                              </div>
+
+                            <!-- Convert to -->
+                              <div class="col-auto">
+                                <button type="button" class="btn btn-primary btn-sm">Convert Length</button>
+                              </div>
+
+                            <!-- Hidden info -->
+                              <div class="alert alert-info" role="alert">
+                                <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                              </div>
+
+                            <!-- Rates -->
+                              <div class="row">
+                                <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse-5" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
+                                  <div class="col">
+                                    <div class="collapse multi-collapse-5">
+                                      <div class="pt-2">
+                                        This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col">
+                                    <div class="collapse multi-collapse-5">
+                                      <div class="pt-2">
+                                        This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- accordion-item 5 -->
+
+                      <div class="mt-4">
+                    <div class="accordion-item">
+                    <!-- panelsStayOpen-headingSix --> 
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true">
+                  Six
+                </button>
+                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show">
+
+                    <!-- Enter form -->
+                      <div class="accordion-body">
+                        <form class="row g-2">
+                          <div class="col-auto">
+                            <input class="form-control form-control-sm" type="number" placeholder="Enter amount">
+                          </div>
+
+                            <!-- Select form 1 -->
+                              <div class="col-auto">
+                                <select class="form-select form-select-sm">
+                                  <option value="1">Millimetres/s [mm]</option>
+                                  <option value="2">Centimetre/s [cm]</option>
+                                  <option value="3">Metre/s [m]</option>
+                                  <option value="4">Kilometre/s [km]</option>
+                                  <option value="5">Inch/s [in]</option>
+                                  <option value="6">Feet/s [ft]</option>
+                                  <option value="7">Yard/s [yd]</option>
+                                  <option value="8">Mile/s [ml]</option>
+                                  <option value="9">Nautical mile/s [nm]</option>
+                                </select>
+                              </div>
+
+                            <!-- Select form 2 -->
+                              <div class="col-auto">
+                                <select class="form-select form-select-sm">
+                                  <option value="1">Millimetres/s [mm]</option>
+                                  <option value="2">Centimetre/s [cm]</option>
+                                  <option value="3">Metre/s [m]</option>
+                                  <option value="4">Kilometre/s [km]</option>
+                                  <option value="5">Inch/s [in]</option>
+                                  <option value="6">Feet/s [ft]</option>
+                                  <option value="7">Yard/s [yd]</option>
+                                  <option value="8">Mile/s [ml]</option>
+                                  <option value="9">Nautical mile/s [nm]</option>
+                                </select>
+                              </div>
+
+                            <!-- Convert to -->
+                              <div class="col-auto">
+                                <button type="button" class="btn btn-primary btn-sm">Convert Length</button>
+                              </div>
+
+                            <!-- Hidden info -->
+                              <div class="alert alert-info" role="alert">
+                                <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                              </div>
+
+                            <!-- Rates -->
+                              <div class="row">
+                                <details type="text" data-bs-toggle="collapse" data-bs-target=".multi-collapse-6" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
+                                  <div class="col">
+                                    <div class="collapse multi-collapse-6">
+                                      <div class="pt-2">
+                                        This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col">
+                                    <div class="collapse multi-collapse-6">
+                                      <div class="pt-2">
+                                        This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- accordion-item 6 -->
+</div>
+ </div>
+</div>
+    
+   
+      
+        
+    
+
+    <output id="millimetre"></output>
+    <output id="yard"></output>
+    <output id="kilometre"></output>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src='js/main.js'></script>
+  
+  </body>
+</html>
