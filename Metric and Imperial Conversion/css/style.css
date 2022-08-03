@@ -18,10 +18,17 @@
   height: 1.5rem
 }
 
-#anr{
-  padding-left: 70px;
+#сl{
+  padding-left: 40px; /* 100 cm */
 }
 
-#anl{
-  padding-left: 40px;
+#yl{
+  padding-left: 70px; /* 1760 yd, 4840 yd2*/
 }
+
+#ca{
+  padding-right: 30px; /* 100 mm2, 100 ha */
+}
+
+#sq{
+  padding-left: 12px; /* 100 cm */

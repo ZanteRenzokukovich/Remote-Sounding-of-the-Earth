@@ -38,7 +38,7 @@
                 <div class="accordion-body bg-light pt-2 pb-2">
                   <form class="row g-2">
                     <div class="col-auto">
-                      <input class="form-control form-control-sm border-primary" type="number" placeholder="Enter amount">
+                      <input class="form-control form-control-sm border-primary" type="number" placeholder="Enter amount" id="userEnter">
                     </div>
 
                       <!-- Select form 1 -->
@@ -73,16 +73,16 @@
 
                       <!-- Convert to -->
                       <div class="col-auto">
-                        <button type="button" class="btn btn-outline-primary btn-sm">Convert Length</button>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="clickLength()">Convert Length</button>
                       </div>
 
                       <!-- Hidden info -->
-                      <div class="alert alert-info pt-0 pb-0 mx-1" role="alert">
-                          <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                      <div class="alert alert-info pt-0 pb-0 mx-1" id="hide" role="alert">
+                          <output id="resultLength"></output>
                       </div>
 
                       <!-- Rates left -->
-                      <div class="row px-1">
+                      <div class="row px-1 mt-1">
                         <details data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
                           <div class="col">
                             <div class="collapse multi-collapse">
@@ -91,11 +91,11 @@
                                 <div class="col"><hr></div>
                                 <div class="col-auto fw-bold">Imperial</div>
                               </div>
-                              <div class="d-flex justify-content-end" style="height: 200px;">
+                              <div class="d-flex justify-content-end" style="height: 185px;">
                                 <div class="container px-2">
                                   <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
                                     <p>1 millimetre [mm]</p> 
-                                    <p> 0.03937 in</p>
+                                    <p>0.03937 in</p>
                                   </div>
                                   <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
                                     <p>1 centimetre [cm]</p> 
@@ -104,7 +104,7 @@
                                   </div>
                                   <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
                                     <p>1 metre [m]</p> 
-                                    <p id="anl">100 cm</p> 
+                                    <p id="сl">100 cm</p> 
                                     <p>1.0936 yd</p>
                                   </div>
                                   <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
@@ -126,7 +126,7 @@
                                 <div class="col"><hr></div>
                                 <div class="col-auto fw-bold">Metric</div>
                               </div>
-                              <div class="d-flex" style="height: 200px;">
+                              <div class="d-flex" style="height: 185px;">
                                 <div class="vr"></div>
                                   <div class="container px-2">
                                     <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
@@ -145,7 +145,7 @@
                                   </div>
                                   <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
                                     <p>1 mile</p> 
-                                    <p id="anr" >1760 yd</p> 
+                                    <p id="yl">1760 yd</p> 
                                     <p>1.6093 km</p>
                                   </div>
                                   <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
@@ -168,10 +168,10 @@
             <div class="accordion-item">
 
               <!-- panelsStayOpen-headingTwo --> 
-              <button class="accordion-button bg-dark text-white pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true">
+              <button class="accordion-button bg-dark text-white pt-1 pb-1" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false">
                 Area Conversion
               </button>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
 
                   <!-- Enter form -->
                   <div class="accordion-body bg-light pt-2 pb-2">
@@ -214,30 +214,88 @@
 
                         <!-- Convert to -->
                         <div class="col-auto">
-                          <button type="button" class="btn btn-outline-primary btn-sm">Area Conversion</button>
+                          <button type="button" class="btn btn-outline-primary btn-sm">Convert Area</button>
                         </div>
 
                         <!-- Hidden info -->
-                        <div class="alert alert-info pt-0 pb-0 mx-1" role="alert">
-                          <strong>Conversion Result:</strong> 3 Millimetre/s = 3 Millimetre/s
+                        <div class="alert alert-info pt-0 pb-0 mx-1" id="hide-2" role="alert">
+                          <output id="resultArea"></output>
                         </div>
 
-                        <!-- Rates -->
-                        <div class="row px-1">
-                          <details data-bs-toggle="collapse" data-bs-target=".multi-collapse-2" aria-expanded="false"><summary><small>LENGTH CONVERSION RATES</small></summary></details>
+                        <!-- Rates left -->
+                        <div class="row px-1 mt-1">
+                          <details data-bs-toggle="collapse" data-bs-target=".multi-collapse-2" aria-expanded="false"><summary><small>AREA CONVERSION RATES</small></summary></details>
                             <div class="col">
                               <div class="collapse multi-collapse-2">
-                                <div class="pt-2">
-                                  This panel is hidden by default but revealed when llll the user activates the relevant trigger.
+                                <div class="row pt-2 px-4">
+                                  <div class="col-auto fw-bold">Metric</div>
+                                  <div class="col"><hr></div>
+                                  <div class="col-auto fw-bold">Imperial</div>
+                                </div>
+                                <div class="d-flex justify-content-end" style="height: 185px;">
+                                  <div class="container px-2">
+                                    <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq cm [cm2]</p> 
+                                      <p id="ca">100 mm2</p>
+                                      <p>0.1550 in2</p> 
+                                    </div>
+                                    <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq m [m2]</p> 
+                                      <p>10,000 cm2</p> 
+                                      <p>1.1960 yd2</p>
+                                    </div>
+                                    <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 hectare [ha]</p> 
+                                      <p class="me-2">10,000 m2</p> 
+                                      <p>2.4711 acres</p>
+                                    </div>
+                                    <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq km [km2]</p> 
+                                      <p id="ca">100 ha</p> 
+                                      <p>0.3861 mile2</p>
+                                    </div>
+                                  </div> 
+                                    <div class="vr"></div>
                                 </div>
                               </div>
                             </div>
-
+                          
+                            <!-- Rates right -->
                             <div class="col">
                               <div class="collapse multi-collapse-2">
-                                <div class="pt-2">
-                                  This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                <div class="row pt-2 px-4">
+                                  <div class="col-auto fw-bold">Imperial</div>
+                                  <div class="col"><hr></div>
+                                  <div class="col-auto fw-bold">Metric</div>
                                 </div>
+                                <div class="d-flex" style="height: 185px;">
+                                  <div class="vr"></div>
+                                    <div class="container px-2">
+                                      <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq inch [in2]</p> 
+                                      <p>6.4516 cm2</p>
+                                    </div>
+                                    <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq foot [sq ft]</p> 
+                                      <p>144 in2</p> 
+                                      <p>0.0929 m2</p>
+                                    </div>
+                                    <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq yd [yd2]</p> 
+                                      <p id="sq">9 sq ft</p> 
+                                      <p>0.8361 m2</p>
+                                    </div>
+                                    <div class="alert alert-secondary d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 acre</p> 
+                                      <p id="yl">4840 yd2</p> 
+                                      <p>4046.9 m2</p>
+                                    </div>
+                                    <div class="alert alert-dark d-flex justify-content-between pt-0" role="alert" id="ft">
+                                      <p>1 sq mile [mile2]</p> 
+                                      <p>640 acres</p> 
+                                      <p>2.59 km2</p>
+                                    </div>
+                                  </div>   
                               </div>
                             </div>
                         </div>
@@ -247,7 +305,7 @@
             </div> <!-- accordion-item 2 -->
         </div>
       </div>
-    </div>
+    </div> <!-- container -->
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
