@@ -13,9 +13,27 @@
   background-image: none;
 }
 
-#ft{
-  font-size: 14px;
-  height: 1.5rem
+.enter {
+  width: 120px;
+}
+
+.font {
+  font-size: 12px;
+}
+
+.fw-bold {
+  font-size: 13.5px;
+}
+
+/* Length Conversion */ 
+
+.lc {                
+  font-size: 12.5px;
+  height: 1.2rem
+}
+
+.line {
+  height: 168px;
 }
 
 #сl{
@@ -23,7 +41,14 @@
 }
 
 #yl{
-  padding-left: 70px; /* 1760 yd, 4840 yd2*/
+  padding-left: 60px; /* 1760 yd, 4840 yd2*/
+}
+
+/* Area Conversion */ 
+
+.ac {                
+  font-size: 12.5px;
+  height: 1.2rem
 }
 
 #ca{
@@ -31,4 +56,15 @@
 }
 
 #sq{
-  padding-left: 12px; /* 100 cm */
+  padding-left: 8px; /* 9 sq ft */
+}
+
+/* Volume Conversion */ 
+
+.vc {                
+  font-size: 12.5px;
+  height: 1.2rem
+}
+
+
+
