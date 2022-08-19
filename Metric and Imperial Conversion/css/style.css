@@ -66,5 +66,41 @@
   height: 1.2rem
 }
 
+#dm{
+  padding-left: 24px; /* 1,000 dm3 */
+}
 
+#ga{
+  padding-right: 34px; /* 8 pt */
+}
 
+/* Mass Conversion */ 
+
+.mc {                
+  font-size: 12.5px;
+  height: 1.2rem
+}
+
+#mg{
+  padding-left: 13px; /* 1,000 mg */
+}
+
+#cg{
+  padding-right: 22px; /* 1,000 g */
+}
+
+#mk{
+  padding-left: 20px; /* 1,000 kg */
+}
+
+#cz{
+  padding-left: 28px; /* 16 oz */
+}
+
+#ml{
+  padding-left: 55px; /* 14 lb */
+}
+
+#lb{
+  padding-right: 21px; /* 14 lb */
+}
